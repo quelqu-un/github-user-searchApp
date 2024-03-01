@@ -1,0 +1,88 @@
+
+
+   .list-container {
+    /* display: grid;*/
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+    gap: 20px; /* Adjusts the gap between grid items */
+    width: 60%;
+    justify-items: center; /* Center items horizontally */
+    border-radius: 50vh;
+  } 
+  .user-item a, .user-item a:visited {
+    text-decoration: none; /* Removes underline it didnt work */
+    color: inherit; /* Keeps the text color consistent */
+  }
+  
+  .user-item {
+    flex: 1 1 calc(50% - 20px); /* Each item takes up half the width minus the gap */
+    display: flex; /* Keep your existing styles here */
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%; /* Ensure full width to align properly */
+    background: linear-gradient(to right, #FF8911,#fa932b, #f7ab38);  /* Light grey for odd items */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px; /* Rounded corners */
+  }
+  .pagination button {
+    padding: 5px 10px;
+    margin: 0 5px ;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    background-color: #7F27FF;
+  }
+  
+  .pagination{
+    margin-top: -5px;
+  }
+  .pagination button:disabled {
+    background-color: #f7ab38;
+    cursor: not-allowed;
+  }
+  
+  .pagination button:hover:not(:disabled) {
+    background-color: #FF8911
+  }
+  
+  .user-avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    padding: 8px;
+   
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name, .user-type {
+    margin: 0;
+  }
+  
+   .fade-enter {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 500ms, transform 500ms;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  

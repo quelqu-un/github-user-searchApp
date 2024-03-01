@@ -1,0 +1,82 @@
+
+.user-avatar2 {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border-radius: 50%;
+    padding: 20px;
+  }
+  
+  .user-name2 {
+    font-size: 1.5rem;
+
+  }
+  
+  .user-bio {
+    max-width: 80%; /* Limit bio width to 25% of the parent's width */
+    overflow-wrap: break-word;/* Ensures long words do not overflow */
+  }
+  
+  .user-stats {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-around;
+ /* Adjust based on layout */
+    gap: 20px;
+
+  }
+  
+  .user-details {
+    background: linear-gradient(to right, #FF8911, #fa932b, #f7ab38);
+    height: 75vh;
+    padding: 2vh;
+    margin-top: 25px;
+    border-radius: 15px 30px 45px 60px; /* Rounded corners */
+    display: flex; /* Use Flexbox this makes bio  to center*/
+    flex: 1;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically (if needed) */
+    text-align: center; /* Center text for each child element */
+  }
+  
+
+ html, body {
+    height: 100%;
+    overflow: hidden; /* Use cautiously - ONLY THAT WORKED scroll*/  
+ }
+    .repo-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+        gap: 20px; /* Space between items */
+        /* Removes bullet points from the list */
+        margin-bottom: 15px;
+       
+       
+      }
+      
+      .repo-item {
+        min-height: 30vh; /* Minimum height to accommodate content */
+        width: 60vh; /* Adjust width as needed */
+        background: linear-gradient(to right, #6922d4, #7f40dd, #7d5ac4);
+        max-height: 350px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+         /*display: flex; Use Flexbox */
+        flex-direction: column; /* Organize content vertically */
+        overflow: hidden; /* Hide overflow, or use 'auto' to add scrollbars when needed */
+      }
+      
+ a{
+    text-decoration: none; 
+    font-weight: bold;
+    color: #fa932b;
+ }
+ .repo-item p {
+    overflow-wrap: break-word; /* Ensure long words wrap */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines, for example */
+    -webkit-box-orient: vertical;
+    font-size: 1.85vh
+  }
